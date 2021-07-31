@@ -6,8 +6,8 @@ import mongoose from 'mongoose';
 import router from './routes';
 
 mongoose.Promise=global.Promise;
-const dbUrl = 'mongodb://localhost:27017/dbsistema2';
-//const dbUrl = 'mongodb+srv://GabrielPD:30270pa@gabrielpd.lg8jk.mongodb.net/dbsistema?retryWrites=true&w=majority';
+//const dbUrl = 'mongodb://localhost:27017/dbsistema2';
+const dbUrl = 'mongodb+srv://GabrielPD:30270pa@gabrielpd.lg8jk.mongodb.net/dbsistema?retryWrites=true&w=majority';
 mongoose.connect(dbUrl, {useFindAndModify: false,useNewUrlParser: true, useUnifiedTopology: true,useCreateIndex: true})
 .then(mongoose=>console.log('Conectado a la base de datos MongoDB'))
 .catch(err=>console.log(err));
